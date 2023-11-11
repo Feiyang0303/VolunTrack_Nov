@@ -3,7 +3,7 @@ import React from 'react';
 import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'; // Import FlatList
 import colors from '../../assets/colors/colors';
 import MailSearchBar from '../components/MailSearchBar';
-import { usePushNotification } from '../services/pushnotifications';
+import { usePushNotification } from '../services/PushNotification';
 
 import messaging from '@react-native-firebase/messaging';
 import { useEffect } from 'react';
