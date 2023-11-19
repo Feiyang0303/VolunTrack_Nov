@@ -1,17 +1,4 @@
-import messaging from '@react-native-firebase/messaging';
-import { AppRegistry, Image, StyleSheet, View } from 'react-native';
-import AppContainer from './App'; // Rename the App component to AppContainer
-import { name as appName } from './app.json';
-
-messaging().setBackgroundMessageHandler(async remoteMessage => {
-  console.log('Message handled in the background!', remoteMessage);
-});
-
-AppRegistry.registerComponent(appName, () => AppContainer); // Use AppContainer instead of App
-
-// ... (rest of your code remains the same)
-
-
+import { Image, StyleSheet, View } from 'react-native';
 
 import AboutUsScreen from './src/screens/AboutUsScreen';
 import BookmarkedScreen from './src/screens/BookmarkedScreen';
@@ -37,7 +24,7 @@ const TabNavigator = () => {
       style: styles.tabBar,
       activeTintColor: colors.primary,
       inactiveTintColor: colors.secondary,
-      headerShown: false,
+      headerShown: false, 
 
       'tabBarShowLabel': false,
       'tabBarStyle': [
@@ -104,13 +91,11 @@ const App = () => {
   )
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create ({
   tabBar: {
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
-  },
-});
-
+    bordertopLeftRadius: 20,
+    bordertopRightRadius: 20,
+  }
+})
 
 export default App;
-
